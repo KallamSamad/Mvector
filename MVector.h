@@ -1,0 +1,15 @@
+#pragma once
+#pragma once
+class MVector
+{
+public:
+	MVector(int size);
+	~MVector(); // this is your destructor
+	void setElement(int index,double value);
+	void display();
+private:
+	// number of elements this MVector represents
+	int size = 0;
+	// pointer to an array of doubles
+	double* values = nullptr;
+};
