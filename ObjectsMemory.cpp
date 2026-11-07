@@ -12,6 +12,8 @@ int main()
 #endif
 	MVector* vector1 = new MVector(10);
 
+
+
 	vector1->display();
 	cout << "Doing something\n";
 	delete vector1;

@@ -9,7 +9,7 @@ public:
 	void display();
 private:
 	// number of elements this MVector represents
-	int size = 0;
+	int size;
 	// pointer to an array of doubles
 	double* values = nullptr;
 };

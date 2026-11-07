@@ -24,6 +24,7 @@ void MVector::setElement(int index, double value) {
 
 void MVector::display() {
 	for (int i = 0; i < size; i++) {
-		cout << this->values[i];
+		setElement(i, i+1);
+		cout << this->values[i]<<"\n";
 	}
 }
