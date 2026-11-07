@@ -7,6 +7,7 @@ public:
 	~MVector(); // this is your destructor
 	void setElement(int index,double value);
 	void display();
+	MVector vectorSum(const MVector& a);
 private:
 	// number of elements this MVector represents
 	int size;

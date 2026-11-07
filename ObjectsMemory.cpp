@@ -11,10 +11,16 @@ int main()
 	_onexit(_CrtDumpMemoryLeaks);
 #endif
 	MVector* vector1 = new MVector(10);
+	MVector* vector2 = new MVector(10);
+	for (int i = 0; i < 10; i++) {
+		vector1->setElement(i, i + 1);
+		vector2->setElement(i, i + 1);
+	}
+
+	MVector vector3 = vector1->vectorSum(*vector2);
 
 
-
-	vector1->display();
+	vector3.display();
 	cout << "Doing something\n";
 	delete vector1;
 
