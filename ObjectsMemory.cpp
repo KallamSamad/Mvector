@@ -18,10 +18,17 @@ int main()
 	}
 
 	MVector vector3 = vector1->vectorSum(*vector2);
-
+	 
 
 	vector3.display();
-	cout << "Doing something\n";
+
+	 
+
+	cout << vector3.magnitude();
+
+	vector3.normalised().display();
+
+	cout << "Doing something";
 	delete vector1;
 
 	return 0;

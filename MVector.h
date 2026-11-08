@@ -8,6 +8,9 @@ public:
 	void setElement(int index,double value);
 	void display();
 	MVector vectorSum(const MVector& a);
+	double magnitude();
+	MVector normalised();
+
 private:
 	// number of elements this MVector represents
 	int size;

@@ -1,5 +1,6 @@
 #include "MVector.h"
 #include <iostream>
+#include <cmath> 
 using namespace std;
 MVector::MVector(int size)
 {
@@ -24,7 +25,40 @@ void MVector::setElement(int index, double value) {
 
 void MVector::display() {
 	for (int i = 0; i < size; i++) {
-		setElement(i, i+1);
-		cout << this->values[i]<<"\n";
+		cout << this->values[i] << " ";
+
+	};
+}
+
+MVector MVector::vectorSum(const MVector& a) {
+	MVector result = MVector(size);
+	if (this->size == a.size) {
+
+		for (int i = 0; i < size; i++) {
+			result.values[i] = this->values[i] + a.values[i];
+		}
 	}
+	else {
+		cout << "Vectors are not same size"<<"\n";
+	}
+	return result;
+
+}
+
+double MVector::magnitude() {
+	int runningTotal=0;
+	for (int i = 0; i < size; i++) {
+		runningTotal+=pow(this->values[i],2);
+	}
+	double result=sqrt(runningTotal);
+	return result;
+}
+
+MVector MVector::normalised() {
+	MVector result = MVector(size);
+	double magnitude=this->magnitude();
+	for (int i = 0; i < size; i++) {
+		result.values[i] = this->values[i] / magnitude;
+	}
+	return result;
 }
