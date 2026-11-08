@@ -28,6 +28,9 @@ int main()
 
 	vector3.normalised().display();
 
+	double vector4=vector1->dotProduct(*vector1);
+
+	cout << vector4;
 	cout << "Doing something";
 	delete vector1;
 

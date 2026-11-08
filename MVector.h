@@ -10,6 +10,7 @@ public:
 	MVector vectorSum(const MVector& a);
 	double magnitude();
 	MVector normalised();
+	double dotProduct(const MVector& a);
 
 private:
 	// number of elements this MVector represents

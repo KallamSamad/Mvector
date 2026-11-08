@@ -62,3 +62,14 @@ MVector MVector::normalised() {
 	}
 	return result;
 }
+
+double MVector::dotProduct(const MVector& a) {
+	double sum = 0;
+	double product = 0;
+	for (int i = 0; i < size; i++) {
+		product=this->values[i] * a.values[i];
+		sum += product;
+	}
+	return sum;
+
+}
